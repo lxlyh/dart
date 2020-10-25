@@ -3,6 +3,8 @@ set -ex
 
 brew update > /dev/null
 brew bundle || brew bundle
+
+# OpenSceneGraph
 brew install open-scene-graph --HEAD # install master branch until 3.7.0 is released
 
 # pagmo2: build from source until https://github.com/esa/pagmo2/issues/445 is resolved
