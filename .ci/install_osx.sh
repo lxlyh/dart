@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -ex
 
+# Temporary workaround for https://github.com/actions/virtual-environments/issues/1811
+brew untap local/homebrew-openssl
+brew untap local/homebrew-python2
+
 brew update > /dev/null
 brew bundle || brew bundle
 

@@ -96,11 +96,7 @@ jobs:
       BUILD_TYPE: Release
       BUILD_DARTPY: ON
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@v2
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: .ci/install.sh
       - name: Build
